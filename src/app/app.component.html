@@ -1,8 +1,8 @@
-<app-app-header></app-app-header>
+<app-app-header (selected)="onSelected($event)"></app-app-header>
 <div class="container">
   <div class="row">
-    <app-recipes></app-recipes>
+    <app-recipes *ngIf="name =='recipe'"></app-recipes>
     <hr>
-    <app-shopping-list></app-shopping-list>
+    <app-shopping-list *ngIf="name!='recipe'"></app-shopping-list>
   </div>
 </div>
